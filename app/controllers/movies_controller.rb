@@ -4,11 +4,20 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
-  def top
-    @movies = Movie.where('imdb_score > ?', 7.5)
+  def show
+    sum = 0
+    @movie.reviews.each do |review|
+      sum += review.rating.to_i
+    end
+    if @movie.reviews.length > 0
+      @avg_rate = (sum / @movie.reviews.length).to_f
+    end
   end
 
-  def show; end
+  def top
+    @movies = Movie.where('imdb_score > ?', 7.5).sort { |a, b| b <=> a }
+    @avg_rate
+  end
 
   def new
     @movie = Movie.new

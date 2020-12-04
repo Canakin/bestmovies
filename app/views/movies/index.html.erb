@@ -4,7 +4,7 @@
       <h2><%= movie.title %></h2>
       <h4><%= "(#{movie.year})" %></h4>
       <%= image_tag movie.photo %>
-      <%= link_to '--> Details', movie_path(movie.id) %>
+      <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
    </div>
   <% end %>
 </div>
