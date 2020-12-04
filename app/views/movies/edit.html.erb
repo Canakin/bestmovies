@@ -1,0 +1,12 @@
+<%= simple_form_for(@movie) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :year %>
+  <%= f.input :genre %>
+  <%= f.input :summary %>
+  <%= f.input :imdb_score %>
+  <%= f.select :catego, ['TV series', 'movies']%>
+  <%= f.input :origin %>
+  <%= f.input :languange %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit %>
+<% end %>

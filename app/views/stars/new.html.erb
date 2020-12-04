@@ -1,0 +1,10 @@
+<%= simple_form_for [:movie_id, @star], url: movie_stars_path do |f| %>
+  <%= f.input :fullname %>
+  <%= f.input :birthyear %>
+  <%= f.input :minibio %>
+  <%= f.input :nationality %>
+  <%= f.input :top_movies %>
+  <%= f.input :height %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class:'btn btn-primary' %>
+<% end %>

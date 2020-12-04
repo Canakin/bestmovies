@@ -1,0 +1,97 @@
+.cards {
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-category {
+  border: 2px solid #F8F8FF;
+  margin:30px;
+  background-color: #FFFFF0;
+  text-align: center;
+  border-radius:15%;
+  box-shadow: 2px 2px 2px #DCDCDC;
+  img {
+    width:60% ;
+    height:60%;
+    display:flex;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+  h2 {
+    padding-top:20px;
+    font-family: 'Arial Black';
+  }
+}
+
+// Product cards styling at CSS sheet
+//---------------------
+.card-product {
+  overflow: hidden;
+  height: 600px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  width: 400px;
+  object-fit: cover;
+}
+
+.card-product h2, h5 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 15px;
+  line-height: 2.1;
+  opacity: .9;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}

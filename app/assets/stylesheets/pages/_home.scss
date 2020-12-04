@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+#main_section_one {
+  background-image: url('https://res.cloudinary.com/ds2odybte/image/upload/v1607078914/best_of_NF_jaepxi.jpg');
+  opacity: 0.9;
+  height:700px;
+}
+
+#main_section_two {
+  text-align: center;
+  color:#FFFAF0;
+  text-shadow: 3px 3px 3px black  ;
+  padding-top: 170px;
+  font-family: $body-font;
+}

@@ -1,0 +1,5 @@
+<%= simple_form_for [:movie_id, @review], url: movie_reviews_path(params[:movie_id]) do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: 0..10 %>
+  <%= f.button :submit, class:'btn btn-primary' %>
+<% end  %>

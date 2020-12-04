@@ -1,0 +1,9 @@
+<%= simple_form_for [:movie, @star] do |f| %>
+  <%= f.input :fullname %>
+  <%= f.input :birthyear %>
+  <%= f.input :minibio %>
+  <%= f.input :nationality %>
+  <%= f.input :top_movies %>
+  <%= f.input :height %>
+  <%= f.button :submit, class:'btn btn-primary' %>
+<% end %>

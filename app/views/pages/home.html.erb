@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id='main_section_one'>
+  <div id='main_section_two'>
+    <h1>Best Movies of Online Platforms</h1>
+    <br>
+    <h2>You can find the list of best movies and thier details at this app.</h2>
+    <br>
+    <h4>You can also share your valuable review. </h4>
+    <h4>Every thought is special and important for us.</h4>
+    <% if user_signed_in? == false %>
+      <%= link_to 'Login', user_session_path, class:'btn btn-primary' %>
+    <% end %>
+    <%= link_to 'movies', movies_path, class:'btn btn-primary' %>
+  </div>
+</div>
