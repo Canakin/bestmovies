@@ -1,5 +1,5 @@
 class StarsController < ApplicationController
-  before_action :find_movie, only: [:show]
+  before_action :find_stars, only: [:show]
 
   def index
     @stars = Star.all
@@ -36,7 +36,7 @@ class StarsController < ApplicationController
 
   private
 
-  def find_movie
+  def find_stars
     @star = Star.find(params[:id])
   end
 

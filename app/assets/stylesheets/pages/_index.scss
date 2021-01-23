@@ -8,3 +8,9 @@
   margin-left:auto;
   width:60%
 }
+
+#stars {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:16px;
+}

@@ -1,12 +1,14 @@
-<ul>
-<% @stars.each do |star| %>
-  <li><%="#{star.fullname}"%>
-  <% if star.photo.attached?  %>
-    <%= image_tag star.photo, class:'img_top' %>
+<div id='stars'>
+  <ul>
+  <% @stars.each do |star| %>
+    <li><%="#{star.fullname}"%>
+    <% if star.photo.attached?  %>
+      <%= image_tag star.photo, class:'img_top' %>
+    <% end %>
+    </li>
   <% end %>
-  </li>
-<% end %>
-</ul>
+  </ul>
+</div>
 
 <div class='btn btn primary'>
   <button><%= link_to 'New Actor', new_movie_star_path %></button>
