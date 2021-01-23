@@ -1,4 +1,6 @@
-<div id='stars'>
+<h2 style='text-align:center;margin-top: 10px;'>Stars</h2>
+<hr>
+<div class='container' id='stars'>
   <ul>
   <% @stars.each do |star| %>
     <li><%="#{star.fullname}"%>
@@ -10,6 +12,6 @@
   </ul>
 </div>
 
-<div class='btn btn primary'>
+<div class='btn btn primary' id='centered'>
   <button><%= link_to 'New Actor', new_movie_star_path %></button>
 </div>
