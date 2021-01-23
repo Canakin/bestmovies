@@ -3,7 +3,7 @@
   <hr size=10 color=gray>
   <div id='top-list'>
     <ol>
-      <% @movies.sort.each do |movie|  %>
+      <% @movies.sort {|a,b| a.imdb_score <=> b.imdb_score}.first(5).each do |movie|  %>
       <li>
         <%= "#{movie.title} (#{movie.year}) -- Rating: #{movie.imdb_score} "%><%= link_to ' 👉 ', movie_path(movie) %>
         <%= image_tag movie.photo, class:'img_top'%>

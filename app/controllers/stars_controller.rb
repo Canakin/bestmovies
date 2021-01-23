@@ -1,10 +1,11 @@
 class StarsController < ApplicationController
+  before_action :find_movie, only: [:show]
+
   def index
     @stars = Star.all
   end
 
-  def show
-    @star = Star.find(params[:id])
+  def show;
   end
 
   def new
@@ -34,6 +35,10 @@ class StarsController < ApplicationController
   end
 
   private
+
+  def find_movie
+    @star = Star.find(params[:id])
+  end
 
   def star_params
     params.require(:star).permit(:fullname, :birthyear, :minibio, :nationality, :top_movies, :height, :photo, :movie_id)
