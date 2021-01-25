@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get :top
     end
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
-    resources :stars
-    resources :directors
   end
+  resources :stars, only: [:index, :show, :new, :create]
+  resources :directors, only: [:index, :show, :new, :create]
 end
