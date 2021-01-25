@@ -5,9 +5,8 @@
     <ol>
       <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie|  %>
       <li>
-        <%= "#{movie.title} (#{movie.year}) -- Rating: #{movie.imdb_score} "%><%= link_to ' 👉 ', movie_path(movie) %>
+        <%= "#{movie.title} (#{movie.year}) -- Rating: #{movie.imdb_score} "%><%= link_to ' 👉   ', movie_path(movie) %></li>
         <%= image_tag movie.photo, class:'img_top'%>
-      </li>
       <hr size='6' color='#ADD8E6'>
       <% end %>
     </ol>

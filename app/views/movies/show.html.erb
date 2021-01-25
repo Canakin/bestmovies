@@ -14,7 +14,7 @@
     <h5>Stars</h5>
     <ul>
     <% @movie.stars.each do |star| %>
-      <li style='list-style-type: circle;'><%= "#{star.fullname} ---> " %><%= link_to ' Star Details ', star_path(star) %></li>
+      <li style='list-style-type: circle;'><%= "#{star.fullname} ---> " %><%= link_to ' Star Details ', movie_star_path(@movie) %></li>
     <% end  %>
     </ul>
     <h5>Directors</h5>
@@ -50,10 +50,10 @@
 
   <div class='centered_item' style='margin-top: 30px; margin-bottom: 30px;'>
     <%= link_to 'Add Review', new_movie_review_path(@movie), class:'btn-ghost' %>
-    <%= link_to 'Add Actor', new_star_path(:movie_id), class:'btn-ghost'  %>
+    <%= link_to 'Add Actor', new_movie_star_path(@movie), class:'btn-ghost'  %>
     <%= link_to 'Edit Movie', edit_movie_path(params[:id]), class:'btn-ghost'  %>
     <% if @movie.director.nil? %>
-      <%= link_to 'Add Director', new_director_path(:movie_id), class:'btn-ghost' %>
+      <%= link_to 'Add Director', new_movie_director_path(@movie), class:'btn-ghost' %>
     <% end %>
   </div>
   <div>

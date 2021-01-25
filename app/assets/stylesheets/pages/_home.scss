@@ -22,6 +22,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
+  opacity:0.8;
 }
 
 #our_message {
@@ -39,6 +40,8 @@
 #moviesBtn {
   width:150px;
   font-size:1.5em;
+  border-radius: 25%;
+  box-shadow: 1px 1px 1px gray;
 }
 
 #main_section_three {

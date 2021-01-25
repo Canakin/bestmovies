@@ -1,14 +1,14 @@
 <div class='container'>
   <div id='form_new_movie'>
   <%= simple_form_for(@movie) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :year %>
-    <%= f.input :genre %>
-    <%= f.input :summary %>
-    <%= f.input :imdb_score %>
-    <%= f.select :catego, ['TV series', 'movies']%>
-    <%= f.input :origin %>
-    <%= f.input :languange %>
+    <%= f.input :title, label: "Title of Movie" %>
+    <%= f.input :year, label: "Release Year" %>
+    <%= f.input :genre, label: "Movie Genre" %>
+    <%= f.input :summary, label: "Movie Summary" %>
+    <%= f.input :imdb_score, label:"Imdb Score" %>
+    <%= f.select :catego, ['TV series', 'movies'] %>
+    <%= f.input :origin, label:"Movie Country" %>
+    <%= f.input :languange, label:"Movie Language" %>
     <%= f.input :photo, as: :file %>
     <%= f.button :submit, class:'btn btn-primary'%>
   <% end %>

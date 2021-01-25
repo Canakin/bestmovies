@@ -1,4 +1,4 @@
-<%= simple_form_for (@director) do |f| %>
+<%= simple_form_for [:movie, @director] do |f| %>
   <%= f.input :fullname %>
   <%= f.input :birthyear %>
   <%= f.input :minibio %>

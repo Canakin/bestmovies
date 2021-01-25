@@ -1,14 +1,14 @@
 <div class='container'>
   <div class='card-body'>
-    <ul>
+    <ul id='starList'>
       <% @directors.each do |director| %>
-      <li><%= director.fullname %></li>
+      <li><h2><%= director.fullname %></h2> </li>
+      <hr>
       <% if director.photo.attached?  %>
         <%= image_tag director.photo, class:'img_top' %>
       <% end %>
-      <li><%= director.minibio %></li>
+      <li><b>Mini Bio: </b><%= director.minibio %></li>
       <% end %>
     </ul>
   </div>
-  <button id='#centered'><%= link_to 'Add Director', new_director_path %></button>
 </div>
