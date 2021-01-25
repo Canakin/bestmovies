@@ -1,4 +1,4 @@
-<%= simple_form_for [:movie_id, @star], url: movie_path(:movie_id) do |f| %>
+<%= simple_form_for [:movie_id, @star], url: movie_path(@movie.id) do |f| %>
   <%= f.input :fullname %>
   <%= f.input :birthyear %>
   <%= f.input :minibio %>
