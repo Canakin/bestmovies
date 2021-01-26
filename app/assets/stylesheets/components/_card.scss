@@ -1,7 +1,7 @@
 .cards {
   display: grid;
-  grid-template-columns: 6fr 6fr 6fr;
-  grid-gap: 20px;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-gap: 10px;
 }
 
 // Smallest device
@@ -42,7 +42,7 @@
 .card-category {
   border: 2px solid #F8F8FF;
   margin:30px;
-  background: linear-gradient(#FFFFF0, #F0FFF0);
+  background: linear-gradient(#FFFFF0, #DEB887);
   text-align: center;
   border-radius:15%;
   box-shadow: 2px 2px 2px #DCDCDC;
@@ -80,6 +80,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  width:80%;
 }
 
 .card-product img {
@@ -116,4 +117,6 @@
   border-radius: 25%;
   overflow: hidden;
   box-shadow: 1px 1px 1px gray;
+  padding-left:25px;
+  padding-right:25px;
 }

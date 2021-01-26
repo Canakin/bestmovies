@@ -14,12 +14,12 @@
     <h5>Stars</h5>
     <ul>
     <% @movie.stars.each do |star| %>
-      <li style='list-style-type: circle;'><%= "#{star.fullname} ---> " %><%= link_to ' Star Details ', movie_star_path(@movie) %></li>
+      <li style='list-style-type: circle;'><%= "#{star.fullname} ---> " %><%= link_to ' Star Details ', movie_star_path(@movie, star) %></li>
     <% end  %>
     </ul>
     <h5>Directors</h5>
     <% if @movie.director.nil? == false  %>
-    <p><%= "#{@movie.director.fullname} ---> " %><%= link_to ' Director Details ', movie_director_path(@movie) %></p>
+    <p><%= "#{@movie.director.fullname} ---> " %><%= link_to ' Director Details ', movie_director_path(@movie, @movie.director) %></p>
     <% end %>
   </div>
   </div>

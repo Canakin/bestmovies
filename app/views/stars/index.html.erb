@@ -1,0 +1,9 @@
+<div class='container'>
+<% @stars.each do |star| %>
+<h2 style='margin-bottom: 20px;'><%= star.fullname %></h2>
+<% if star.photo.attached? %>
+<%= image_tag star.photo, class:"star_image"%>
+<% end %>
+<p style='margin-top: 20px;'><%= star.minibio %></p>
+<% end %>
+</div>

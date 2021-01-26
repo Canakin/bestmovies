@@ -17,7 +17,7 @@ class StarsController < ApplicationController
     @star = Star.new(star_params)
     @star.movie = @movie
     if @star.save!
-      redirect_to movie_stars_path
+      redirect_to movies_path
     else
       redirect_to new_movie_star_path
     end

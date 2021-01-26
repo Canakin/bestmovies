@@ -1,1 +1,15 @@
-<h2><%= @director.fullname %></h2>
+<div class='container'>
+  <div class='card-body'>
+    <ul id='starList'>
+      <li><h2><%= @director.fullname %></h2> </li>
+      <hr>
+      <% if @director.photo.attached?  %>
+        <%= image_tag @director.photo, class:'img_top' %>
+      <% end %>
+      <li><b>Mini Bio: </b><%= @director.minibio %></li>
+      <li><b>Birth Year: </b><%= @director.birthyear %>
+      <li><b>Nationality: </b><%= @director.nationality %>
+      <li><b>Top Movies: </b><%= @director.top_movies %>
+    </ul>
+  </div>
+</div>
