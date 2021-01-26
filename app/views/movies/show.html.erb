@@ -3,14 +3,14 @@
   <%= image_tag @movie.photo %>
   <div class="card-product-infos">
     <h2><%= @movie.title %></h2>
-    <p><%= "Year:#{@movie.year}" %></p>
-    <p><%= "Genre:#{@movie.genre.capitalize}"%></p>
+    <p><b>Year: </b><%= "#{@movie.year}" %></p>
+    <p><b>Genre: </b><%= "#{@movie.genre.capitalize}"%></p>
     <p><span class="fa fa-star checked" style='color:orange'></span><strong> Imdb Score: </strong><%= @movie.imdb_score %></p>
     <h5>Summary</h5>
     <p><%= @movie.summary %></p>
-    <p><%= "Category: #{@movie.catego} "%></p>
-    <p><%= "Country: #{@movie.origin}"%></p>
-    <p><%= "Language: #{@movie.languange }"%></p>
+    <p><b>Category: </b><%= "#{@movie.catego} "%></p>
+    <p><b>Country: </b><%= "#{@movie.origin}"%></p>
+    <p><b>Language: </b><%= "#{@movie.languange }"%></p>
     <h5>Stars</h5>
     <ul>
     <% @movie.stars.each do |star| %>
@@ -59,7 +59,7 @@
   <div>
     <hr size='4' width='90%' color='gray'>
   </div>
-  <div class='centered_item' style='margin-top: 30px; margin-bottom: 30px;'>
-    <%= link_to 'All Movies', movies_path, class:'btn-ghost' %>
+  <div class='centered_item' style='margin-top: 30px; margin-bottom: 30px; display:flex; align-items: center; justify-content: center;'>
+    <%= link_to 'All Movies', movies_path, class:'btn-dark' %>
   </div>
 </div>

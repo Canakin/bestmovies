@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: 5fr 5fr 5fr;
+  grid-template-columns: 6fr 6fr 6fr;
   grid-gap: 20px;
 }
 
@@ -49,23 +49,25 @@
   width: 350px;
   height:450px;
   img {
-    width:60% ;
+    width:65% ;
     height:50%;
     display:flex;
-    padding-bottom:20px;
     margin-top: auto;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 30px ;
+    margin-bottom:25px ;
     border-radius: 20%;
+    box-shadow: 2px 2px 2px gray;
   }
   h2 {
     padding-top:15px;
     font-family: 'Arial Black';
     padding-bottom: 15px;
+    font-size:24px;
   }
   h4 {
     padding-bottom:15px;
+    font-size:20px;
   }
 }
 
@@ -101,7 +103,7 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 30px;
 }
 
 #det_link {
