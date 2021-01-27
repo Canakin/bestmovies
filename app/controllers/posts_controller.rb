@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :destroy]
+  before_action :find_post, only: [:edit, :update, :destroy]
 
   def new
     @post = Post.new
@@ -17,10 +17,12 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
+    @forum = Forum.find(params[:forum_id])
+    @post.update(post_params)
+    redirect_to forum_path(@forum)
   end
 
   private
