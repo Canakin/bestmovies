@@ -1,0 +1,35 @@
+<div class='container'>
+  <h1>Welcome to Forums Page</h1>
+  <hr>
+  <h3>Take a look around our forums and join the discussions.</h3>
+  <br>
+  <br>
+  <div class="arrow bounce"></div>
+  <% @forums.each do |forum|  %>
+  <div class='card' id='forumCard'>
+    <div class='card-body'>
+      <h2><%= forum.title %></h2>
+      <hr>
+      <p><b>Forum Description: </b><%= forum.description %></p>
+      <br>
+      <div><%= link_to "Enter Forum", forum_path(forum), class:"btn btn-dark", id:'enterButton' %></div>
+    </div>
+  </div>
+  <% end  %>
+  <br>
+  <div><%= link_to "New Forum", new_forum_path, class:'btn btn-secondary', id:'enterButton' %></div>
+  <br>
+</div>
+
+<script>
+  // Some object properties are determined in this JS part!
+  document.getElementById('forumCard').style.marginTop = "40px";
+  document.getElementById('forumCard').style.marginBottom = "40px";
+  document.getElementById('enterButton').style.display = 'block';
+  document.getElementById('enterButton').style.margin = 'auto';
+  document.getElementById('enterButton').style.width = '30%';
+  console.log(document.querySelector('p'))
+  document.querySelector('p').style.textAlign = 'center';
+  document.querySelector('p').style.marginTop = '20px';
+</script>
+

@@ -1,0 +1,14 @@
+<div class='container'>
+  <h1><%= @forum.title %></h1>
+  <h3><%= @forum.description %></h3>
+  <% @forum.posts.each do |post| %>
+  <div class='card'>
+    <h4>Username: <%= post.user.first_name %></h4>
+    <h4><%= post.title %></h4>
+    <p><%= post.content %></p>
+    <%= link_to 'Edit post', edit_forum_post_path(@forum), class:'btn btn-secondary' %>
+  </div>
+  <% end %>
+  <br>
+  <%= link_to 'New Post', new_forum_post_path(@forum), class:'btn btn-dark'%>
+</div>

@@ -10,4 +10,7 @@ Rails.application.routes.draw do
     resources :stars, only: [:index, :show, :new, :create]
     resources :directors, only: [:index, :show, :new, :create]
   end
+  resources :forums, only: [:index, :show, :new, :create] do
+    resources :posts, only: [:new, :create, :edit, :update, :destroy]
+  end
 end
