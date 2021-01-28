@@ -2,7 +2,7 @@
   <% @movies.each do |movie| %>
    <div class="card-category">
       <h2><%= movie.title %></h2>
-      <h4><%= "(#{movie.year})" %></h4>
+      <h4><b><%= "#{movie.year}" %></b></h4>
       <%= image_tag movie.photo %>
       <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
    </div>

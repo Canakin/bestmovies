@@ -4,19 +4,25 @@
   text-align:center;
   font-family: 'IBM Plex Sans', sans-serif;
   h1 {
-    text-shadow: 3px 3px 3px gray;
+    text-shadow: 4px 4px 4px #DCDCDC;
     padding-top:30px;
     padding-bottom: 30px;
+    color:#191970;
+    font-family: 'Oswald', sans-serif;
   }
   h3 {
     font-family: 'Yusei Magic', sans-serif;
+    color:#4169E1;
+    text-shadow: 4px 4px 4px #DCDCDC;
   }
   h4 {
     font-family: 'Playfair Display', serif;
+    margin-top:15px;
   }
   img {
     border-radius: 20%;
-    box-shadow:2px 2px 2px gray;
+    box-shadow:4px 4px 4px 4px #DCDCDC;
+    width:400px;
   }
   margin-bottom:40px;
 }
@@ -35,27 +41,31 @@
   justify-content:center;
   box-shadow: 3px 3px 3px gray;
   border-radius: 10%;
+  margin-top:40px;
 }
 
 #our_message {
-  margin-top:40px;
-  margin-bottom:30px;
+  margin-top:60px;
+  margin-bottom:50px;
   h2 {
    font-family: 'IBM Plex Sans', sans-serif;
+   color:#4169E1;
+   text-shadow: 4px 4px 4px #DCDCDC;
   }
   p {
    font-family: 'Dancing Script', cursive;
-   font-size:20px;
+   font-size:24px;
   }
 }
 
 #moviesBtn {
   width:150px;
-  font-size:1.5em;
+  font-size:1.3em;
   border-radius: 25%;
   box-shadow: 2px 2px 2px gray;
-  margin-top:15px;
+  margin-top:25px;
   font-family: 'Playfair Display', serif;
+  margin-bottom:30px;
 }
 
 #main_section_three {

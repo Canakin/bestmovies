@@ -1,14 +1,50 @@
 <div class='container'>
+  <br>
   <h2><strong>Top Movies</strong></h2>
   <hr size=10 color=gray>
   <div id='top-list'>
     <ol>
       <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie|  %>
-      <li>
-        <%= "#{movie.title} (#{movie.year}) -- Rating: #{movie.imdb_score} "%><%= link_to ' 👉   ', movie_path(movie) %></li>
+      <div id='list_items'>
+        <li>
+          <p style='font-size:22px'><%= "#{movie.title} (#{movie.year}) "%></p>
+          <p><b>Rating:</b><%= " #{movie.imdb_score} "%></p>
+          <%= link_to ' 👉   ', movie_path(movie) %>
+        </li>
         <%= image_tag movie.photo, class:'img_top'%>
+      </div>
       <hr size='6' color='#ADD8E6'>
       <% end %>
     </ol>
   </div>
 </div>
+
+<style>
+  h2 {
+    color:#191970;
+  }
+
+  #top-list {
+    margin-bottom:60px;
+  }
+
+  ol {
+    list-style-type: upper-roman;
+  }
+
+  #top-list ol li p {
+    font-size:20px;
+  }
+  a {
+    font-size: 36px;
+  }
+
+  #list_items {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+</style>

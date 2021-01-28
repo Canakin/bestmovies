@@ -1,7 +1,7 @@
 .cards {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
-  grid-gap: 10px;
+  grid-gap: 50px;
 }
 
 // Smallest device
@@ -46,16 +46,16 @@
   text-align: center;
   border-radius:15%;
   box-shadow: 2px 2px 2px #DCDCDC;
-  width: 350px;
-  height:450px;
+  width: 370px;
+  height:500px;
   img {
     width:65% ;
-    height:50%;
+    height:55%;
     display:flex;
     margin-top: auto;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom:25px ;
+    margin-bottom:40px ;
     border-radius: 20%;
     box-shadow: 2px 2px 2px gray;
   }
@@ -64,10 +64,12 @@
     font-family: 'Arial Black';
     padding-bottom: 15px;
     font-size:24px;
+    color:#191970;
   }
   h4 {
     padding-bottom:15px;
     font-size:20px;
+    color: #4169E1;
   }
 }
 
@@ -80,7 +82,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  width:80%;
+  width:100%;
 }
 
 .card-product img {
@@ -108,15 +110,15 @@
 }
 
 #det_link {
-  margin-top:60px;
+  margin-top:20px;
   margin-bottom: 20px;
   padding:10px;
-  border:2px solid gray;
-  background-color: #F0FFF0;
-  color:gray;
+  border:2px solid #DCDCDC;
+  background-color: #FDF5E6;
+  color:black;
   border-radius: 25%;
   overflow: hidden;
-  box-shadow: 1px 1px 1px gray;
+  box-shadow: 1px 1px 1px #DCDCDC;
   padding-left:25px;
   padding-right:25px;
 }

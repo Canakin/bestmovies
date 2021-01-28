@@ -14,7 +14,7 @@
     <h5>Stars</h5>
     <ul>
     <% @movie.stars.each do |star| %>
-      <li style='list-style-type: circle;'><%= "#{star.fullname} ---> " %><%= link_to ' Star Details ', movie_star_path(@movie, star) %></li>
+      <li style="list-style-type: none;"><p><%= "#{star.fullname} ---> " %><%= link_to ' Star Details ', movie_star_path(@movie, star) %></p></li>
     <% end  %>
     </ul>
     <h5>Directors</h5>
@@ -25,11 +25,11 @@
   </div>
 
   <h2 style='margin-top:30px; text-shadow:1px 1px gray;'><strong>User Reviews</strong></h2>
-  <p><%= "Average User Review: #{@avg_rate} "%></p>
+  <p><b>Average User Review:</b><%= " #{@avg_rate} "%></p>
     <% @movie.reviews.each do |review| %>
     <div class='card-product' style='height:150px; margin-top:30px;'>
     <div class="card-product-infos">
-      <h6><%= "#{review.user.first_name} #{review.user.last_name}" %></h6>
+      <h6><b><%= "#{review.user.first_name} #{review.user.last_name}" %></b></h6>
       <p><%= "#{review.content}" %></p>
       <% counter = 0  %>
       <% 10.times do %>

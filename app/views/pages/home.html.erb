@@ -26,7 +26,7 @@
   <% if user_signed_in? == false %>
     <%= link_to 'Login', user_session_path, class:'btn btn-primary' %>
   <% end %>
-  <%= link_to 'Go to All Movies', movies_path, class:'btn btn-light', id:'moviesBtn' %>
+  <em><%= link_to 'Go to All Movies', movies_path, class:'btn btn-light', id:'moviesBtn' %></em>
 </div>
 
 
