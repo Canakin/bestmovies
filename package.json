@@ -2,13 +2,13 @@
   "name": "bestmovies",
   "private": true,
   "dependencies": {
-    "@babel/preset-react": "^7.12.10",
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
+    "@babel/preset-react": "^7.12.13",
+    "@rails/actioncable": "^6.1.1",
+    "@rails/activestorage": "^6.1.1",
+    "@rails/ujs": "^6.1.1",
     "@rails/webpacker": "4.3.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
     "mapbox-gl": "^2.0.1",
     "popper.js": "^1.16.1",
@@ -19,6 +19,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.2"
   }
 }

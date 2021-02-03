@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       get :top
     end
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
-    resources :stars, only: [:index, :show, :new, :create]
-    resources :directors, only: [:index, :show, :new, :create]
+    resources :stars, only: [:index, :show, :new, :create, :edit, :update]
+    resources :directors, only: [:index, :show, :new, :create, :edit, :update]
   end
   resources :forums, only: [:index, :show, :new, :create] do
     resources :posts, only: [:new, :create, :edit, :update, :destroy]

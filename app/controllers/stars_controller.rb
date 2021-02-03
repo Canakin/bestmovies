@@ -31,7 +31,7 @@ class StarsController < ApplicationController
     @movie = Movie.find(params[:movie_id])
     @star = Star.find(params[:id])
     @star.update!(star_params)
-    redirect_to movie_stars_path
+    redirect_to movies_path
   end
 
   private
