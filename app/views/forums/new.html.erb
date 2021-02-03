@@ -1,7 +1,22 @@
 <div class='container'>
+  <h3>New Forum Form</h3>
   <%= simple_form_for(@forum) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
+  <%= f.input :title, label: 'Title for the form:' %>
+  <%= f.input :description, label: 'Description of the Form:' %>
   <%= f.submit %>
   <% end %>
 </div>
+
+<style>
+  .container {
+    padding:80px;
+    margin-top:50px;
+    margin-bottom:50px;
+  }
+
+  h3 {
+    padding-bottom:15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:bold;
+  }
+</style>

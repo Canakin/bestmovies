@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :forums, only: [:index, :show, :new, :create] do
     resources :posts, only: [:new, :create, :edit, :update, :destroy]
   end
+  get '/contact', to: "pages#contact"
 end

@@ -1,0 +1,63 @@
+<div class='container'>
+  <div id='heading'></div>
+  <hr>
+  <div id='info'></div>
+  <%= image_tag "https://image.flaticon.com/icons/png/512/65/65680.png", id:'icon'%>
+  <div id='infoTwo'></div>
+  <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZO420MjAbW_uYnK3czs7KHhEteAaoVdCHoA&usqp=CAU", id:'icon' %>
+  <div id='greet'>
+    <h4>Thank you <%= current_user.first_name.capitalize %> for visiting our web app.</h4>
+  </div>
+  <div id='lastMessage'></div>
+</div>
+
+<%= javascript_pack_tag "hello_react" %>
+
+<style>
+  #heading {
+    margin-top: 30px;
+  }
+
+  #infoTwo {
+    margin-top: 30px;
+  }
+
+  #icon {
+    width:10%;
+    display:block;
+    margin:auto;
+  }
+
+  #info {
+    margin-top: 30px;
+  }
+
+  #lastMessage {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom:30px;
+    height:200px;
+    width:700px;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+  h4 {
+    margin-top:40px;
+    text-align: center;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
