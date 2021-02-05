@@ -1,0 +1,24 @@
+<div class='container'>
+  <div class='card-body'>
+    <h2>User Info</h2>
+    <ul>
+      <li><p><b>First Name: </b><%= current_user.first_name %></p></li>
+      <li><p><b>Last Name: </b><%= current_user.last_name %></p></li>
+      <li><p><b>Email: </b><%= current_user.email %></p></li>
+      <hr>
+      <h3><strong>Reviews: </strong></h3>
+      <% @reviews.each do |review| %>
+        <% if review.user %>
+          <li><%= review.movie.title %></li>
+        <% end %>
+      <% end %>
+      <hr>
+      <h3><strong>Posts: </strong></h3>
+      <% @posts.each do |post| %>
+      <% if post.user %>
+       <li><%= post.forum.title %></li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

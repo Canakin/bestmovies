@@ -14,4 +14,5 @@ Rails.application.routes.draw do
     resources :posts, only: [:new, :create, :edit, :update, :destroy]
   end
   get '/contact', to: "pages#contact"
+  get '/dashboard', to: "pages#dashboard"
 end
