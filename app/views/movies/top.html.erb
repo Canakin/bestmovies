@@ -11,7 +11,7 @@
           <p><b>Rating:</b><%= " #{movie.imdb_score} "%></p>
           <%= link_to ' 👉   ', movie_path(movie) %>
         </li>
-        <%= image_tag movie.photo, class:'img_top'%>
+        <%= image_tag movie.photo, class:'img_top', id:'mov_pic'%>
       </div>
       <hr size='6' color='#ADD8E6'>
       <% end %>
@@ -20,6 +20,9 @@
 </div>
 
 <style>
+  #mov_pic {
+    width:500px;
+  }
   h2 {
     color:#191970;
   }
