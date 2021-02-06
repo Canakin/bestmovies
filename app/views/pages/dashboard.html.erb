@@ -1,5 +1,5 @@
 <div class='container'>
-  <div class='card-body'>
+  <div class='card-body' id='userInfo'>
     <h2>User Info</h2>
     <ul>
       <li><p><b>First Name: </b><%= current_user.first_name %></p></li>
@@ -7,6 +7,14 @@
       <li><p><b>Email: </b><%= current_user.email %></p></li>
       <hr>
       <h3><strong>Reviews: </strong></h3>
+      <% arr = []  %>
+      <% @reviews.each do |review| %>
+        <% if review.user %>
+          <% arr << review  %>
+        <% end  %>
+      <% end %>
+      <p><%= "You have #{arr.length} reviews." %></p>
+      <h4>Reviewed Movies:</h4>
       <% @reviews.each do |review| %>
         <% if review.user %>
           <li><%= review.movie.title %></li>
@@ -22,3 +30,13 @@
     </ul>
   </div>
 </div>
+
+<style>
+  #userInfo {
+    width:700px;
+    margin:auto;
+  }
+  h2 {
+    margin-top:20px;
+  }
+</style>
