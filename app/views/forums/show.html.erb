@@ -6,11 +6,11 @@
     <h4><b>Username: </b><i><%= post.user.first_name %></i></h4>
     <h5><%= post.title %></h5>
     <p><%= post.content %></p>
-    <%= link_to 'Edit post', edit_forum_post_path(@forum), class:'btn btn-secondary' %>
+    <%= link_to 'Edit post', edit_forum_post_path(@forum), class:'btn btn-light', id:'editPost' %>
   </div>
   <% end %>
   <br>
-  <%= link_to 'New Post', new_forum_post_path(@forum), class:'btn btn-dark'%>
+  <%= link_to 'New Post', new_forum_post_path(@forum), class:'btn btn-light', id:'newPost'%>
 </div>
 
 <style>
@@ -19,23 +19,49 @@
     font-family: 'IBM Plex Sans', sans-serif;
     margin-bottom:20px;
     font-weight: bold;
+    color:#568EA3;
+    text-align: center;
   }
   h3 {
     font-family: 'Oswald', sans-serif;
     margin-bottom:30px;
+    margin-top:30px;
+    color:#68C3D4;
+    text-align:center;
   }
   #comment {
     padding:30px;
+    background:#FFE8D1;
+    border:2px solid #826251;
   }
   h5 {
     margin-top:15px;
+    color:#826251;
+  }
+  h4 {
+    color:#826251;
   }
 
   p {
     margin-top:20px;
+    color:#826251;
   }
   a {
     margin-top:15px;
     margin-bottom:20px;
+  }
+  #newPost {
+    width:25%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 40px;
+    border:2px solid #568EA3;
+  }
+  #editPost {
+    width:25%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
   }
 </style>

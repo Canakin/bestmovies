@@ -17,3 +17,14 @@ h2 {
   font-family: "Arial Black";
   text-shadow:2px 2px 2px gray;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 50px;
+}
+
+#mov_pic {
+  width:100px;
+  height:100px;
+}
