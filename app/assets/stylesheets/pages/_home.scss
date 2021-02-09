@@ -5,35 +5,37 @@
   font-family: 'IBM Plex Sans', sans-serif;
   h1 {
     text-shadow: 4px 4px 4px #DCDCDC;
-    padding-top:30px;
+    padding-top:50px;
     padding-bottom: 30px;
-    color:#191970;
+    color:#568EA3;
     font-family: 'Oswald', sans-serif;
   }
   h3 {
     font-family: 'Yusei Magic', sans-serif;
-    color:#4169E1;
+    color:#68C3D4;
     text-shadow: 4px 4px 4px #DCDCDC;
   }
   h4 {
     font-family: 'Playfair Display', serif;
     margin-top:15px;
+    color:#826251;
   }
   img {
-    border-radius: 20%;
-    box-shadow:4px 4px 4px 4px #DCDCDC;
+    border-radius: 50%;
+    box-shadow:3px 3px 3px #826251;
     width:400px;
+    height:220px;
   }
   margin-bottom:40px;
 }
 
 #main_section_two {
   text-align: center;
-  color:#FFFAF0;
+  color:#FFE8D1;
   text-shadow: 3px 3px 3px black  ;
   padding-top: 170px;
   font-family: $body-font;
-  background-image: url('https://res.cloudinary.com/ds2odybte/image/upload/v1607078914/best_of_NF_jaepxi.jpg');
+  //background-image: url('https://res.cloudinary.com/ds2odybte/image/upload/v1607078914/best_of_NF_jaepxi.jpg');
   height:700px;
   margin-bottom:10px;
   display:flex;
@@ -49,23 +51,26 @@
   margin-bottom:50px;
   h2 {
    font-family: 'IBM Plex Sans', sans-serif;
-   color:#4169E1;
+   color:#568EA3;
    text-shadow: 4px 4px 4px #DCDCDC;
   }
   p {
    font-family: 'Dancing Script', cursive;
    font-size:24px;
+   color:#826251;
   }
 }
 
 #moviesBtn {
   width:150px;
   font-size:1.3em;
-  border-radius: 25%;
+  border-radius: 20%;
   box-shadow: 2px 2px 2px gray;
   margin-top:25px;
   font-family: 'Playfair Display', serif;
   margin-bottom:30px;
+  background:#FFFFFF;
+  color:#826251;
 }
 
 #main_section_three {
@@ -77,4 +82,90 @@
   display:flex;
   align-items:center;
   justify-content:center;
+}
+
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
+  }
+  * {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+  img {
+    height:700px;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+  height:16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }

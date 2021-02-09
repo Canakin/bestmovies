@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: linear-gradient(#FAEBD7,#F0F8FF);
+  background: linear-gradient(#826251,#FFE8D1 );
   height:160px;
-  border-bottom:1px solid #DEB887;
+  border-bottom:1px solid #826251;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -24,4 +24,7 @@
 .nav-link {
   margin-left: 40px;
   font-size: 15px;
+  color:white;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

@@ -1,10 +1,38 @@
 <div class='container'>
-  <br>
-  <h2><strong>Top Movies</strong></h2>
+
+  <input type="radio" id="movie" value="Movie" />
+  <label for="movie">Movie</label>
+  <input type="radio" id="tvseries" value="TV Series" />
+  <label for="tvSeries">TV Series</label>
+
+  <div id='tvSeries'>
+    <h2><strong><%= "Top TV Series" %></strong></h2>
+    <hr size=10 color=gray>
+    <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie|  %>
+      <% if movie.catego === "TV series"  %>
+      <div id='top-list'>
+       <ol>
+        <div id='list_items'>
+          <li>
+            <p style='font-size:22px'><%= "#{movie.title} (#{movie.year}) "%></p>
+            <p><b>Rating:</b><%= " #{movie.imdb_score} "%></p>
+            <%= link_to ' 👉   ', movie_path(movie) %>
+          </li>
+          <%= image_tag movie.photo, class:'img_top', id:'mov_pic'%>
+        </div>
+        <hr size='6' color='#ADD8E6'>
+          <% end  %>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+
+<h2><strong><%= "Top Movies" %></strong></h2>
   <hr size=10 color=gray>
-  <div id='top-list'>
-    <ol>
-      <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie|  %>
+  <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie|  %>
+    <% if movie.catego === "Movie"  %>
+    <div id='top-list'>
+     <ol>
       <div id='list_items'>
         <li>
           <p style='font-size:22px'><%= "#{movie.title} (#{movie.year}) "%></p>
@@ -14,14 +42,20 @@
         <%= image_tag movie.photo, class:'img_top', id:'mov_pic'%>
       </div>
       <hr size='6' color='#ADD8E6'>
+        <% end  %>
       <% end %>
     </ol>
   </div>
 </div>
 
+<script>
+  const tvSeries = document.getElementById('tvSeries')
+  const movie = document.getElementById('movie')
+</script>
+
 <style>
   #mov_pic {
-    width:500px;
+    width:450px;
   }
   h2 {
     color:#191970;

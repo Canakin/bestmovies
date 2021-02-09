@@ -2,7 +2,7 @@
 <div class='container' id='main_section_one'>
   <h1>Best Movies of Online Platforms</h1>
   <hr>
-  <h3>You can find the list of best movies and thier details at this app.</h3>
+  <h3>You can find the list of best movies and their details at this app.</h3>
   <br>
   <h4>You can also share your valuable review. </h4>
   <h4>Every thought is special and important for us.</h4>
@@ -20,13 +20,114 @@
   <p>We also give importance to you valuable ideas and will be very pleased if you can add extra movies and TV series into our list. </p>
 </div>
 
-<div class='container' id='main_section_two'></div>
+<!-- SWIPER - SLIDER PART OF HTML -->
+<div class="container">
 
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <%= image_tag "https://res.cloudinary.com/ds2odybte/image/upload/v1611747616/The_Spy_jovufs.jpg", width:"100%" %>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <%= image_tag "https://res.cloudinary.com/ds2odybte/image/upload/v1611747541/westworld_z4sukl.jpg", width:"100%"%>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <%= image_tag "https://res.cloudinary.com/ds2odybte/image/upload/v1606935702/The_Platform_poster_oidpox.jpg", width:"100%" %>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <%= image_tag "https://res.cloudinary.com/ds2odybte/image/upload/v1606935714/Undoing_xofsnp.jpg", width:"100%" %>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://res.cloudinary.com/ds2odybte/image/upload/v1611747616/The_Spy_jovufs.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Spy">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://res.cloudinary.com/ds2odybte/image/upload/v1611747541/westworld_z4sukl.jpg" style="width:100%" onclick="currentSlide(2)" alt="West World">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://res.cloudinary.com/ds2odybte/image/upload/v1606935702/The_Platform_poster_oidpox.jpg" style="width:100%" onclick="currentSlide(3)" alt="Platform">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://res.cloudinary.com/ds2odybte/image/upload/v1606935714/Undoing_xofsnp.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Undoing">
+    </div>
+    </div>
+  </div>
+</div>
+<!-- ENDS HERE -->
+
+<div class="arrow bounce"></div>
 <div class='container' id='main_section_three'>
   <% if user_signed_in? == false %>
-    <%= link_to 'Login', user_session_path, class:'btn btn-primary' %>
+    <%= link_to 'Login', user_session_path, class:'btn btn-primary', id:'loginBtn' %>
   <% end %>
-  <em><%= link_to 'Go to All Movies', movies_path, class:'btn btn-light', id:'moviesBtn' %></em>
+  <div>
+    <em><%= link_to 'All Movies', movies_path, class:'btn btn-light', id:'moviesBtn' %></em>
+  </div>
 </div>
+
+<style>
+  #main_section_two {
+    margin-bottom:50px;
+  }
+  #main_section_three {
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    width:300px;
+    padding-top:10px;
+  }
+</style>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
 
 

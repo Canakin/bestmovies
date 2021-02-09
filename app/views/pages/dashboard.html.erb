@@ -1,6 +1,7 @@
 <div class='container'>
   <div class='card-body' id='userInfo'>
     <h2>User Info</h2>
+    <hr>
     <ul>
       <li><p><b>First Name: </b><%= current_user.first_name %></p></li>
       <li><p><b>Last Name: </b><%= current_user.last_name %></p></li>
@@ -14,10 +15,11 @@
         <% end  %>
       <% end %>
       <p><%= "You have #{arr.length} reviews." %></p>
-      <h4>Reviewed Movies:</h4>
+      <h4><b>Reviewed Movies:</b></h4>
       <% @reviews.each do |review| %>
         <% if review.user %>
           <li><%= review.movie.title %></li>
+          <p><%= review.content %></p>
         <% end %>
       <% end %>
       <hr>
@@ -25,6 +27,7 @@
       <% @posts.each do |post| %>
       <% if post.user %>
        <li><%= post.forum.title %></li>
+       <p><%= post.content %></p>
       <% end %>
       <% end %>
     </ul>

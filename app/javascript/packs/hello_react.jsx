@@ -42,7 +42,7 @@ class Email extends React.Component {
 
 function Message() {
   return (
-    <h5>We will be very thankful if you contact us about your ideas and reccommentdations to make our web app better.We deeply value your thoughts and ideas and looking forward to hear from you.</h5>
+    <p>We will be very thankful if you contact us about your ideas and reccommentdations to make our web app better.We deeply value your thoughts and ideas and looking forward to hear from you.</p>
   );
 };
 
