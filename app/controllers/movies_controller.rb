@@ -1,7 +1,26 @@
 class MoviesController < ApplicationController
   before_action :find_movie, only: [:show, :edit, :update]
+
   def index
     @movies = Movie.all
+    @drama = []
+    @comedy = []
+    @horror = []
+    @action = []
+    @movies.each do |movie|
+      if movie.genre.include?('Drama')
+        @drama.push(movie)
+      end
+      if movie.genre.include?('Comedy')
+        @comedy.push(movie)
+      end
+      if movie.genre.include?('Horror')
+        @horror.push(movie)
+      end
+      if movie.genre.include?('Action')
+        @action.push(movie)
+      end
+    end
   end
 
   def show

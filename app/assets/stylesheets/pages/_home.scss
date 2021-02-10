@@ -86,8 +86,8 @@
 
 .containerSwipe {
   position: relative;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .mySlides {
@@ -148,10 +148,12 @@
   clear: both;
 }
 
+
 .column {
-  float: center;
-  width: 16.66%;
-  height:16.66%;
+  float: right;
+  width: 16.4%;
+  height:8%;
+  margin-bottom:40px;
 }
 
 .demo {

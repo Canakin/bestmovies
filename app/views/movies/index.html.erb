@@ -1,10 +1,206 @@
-<div class='cards'>
-  <% @movies.each do |movie| %>
-   <div class="card-category">
-      <h2><%= movie.title %></h2>
-      <h4><b><%= "#{movie.year}" %></b></h4>
+<!-- TV Series by Category -->
+
+<div class='container'>
+
+<h1>List of all TV Series and Movies in our Web App</h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<h2>TV Series</h2>
+<h3>Categories</h3>
+
+<h5>Drama</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @drama.each do |movie| %>
+  <% if movie.catego == 'TV series' %>
+    <div class="card-product">
       <%= image_tag movie.photo %>
-      <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
-   </div>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
   <% end %>
+  </div>
+
+<h5>Comedy</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @comedy.each do |movie| %>
+  <% if movie.catego == 'TV series' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+<h5>Horror</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @horror.each do |movie| %>
+  <% if movie.catego == 'TV series' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+<h5>Action</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @action.each do |movie| %>
+  <% if movie.catego == 'TV series' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+<br>
+<br>
+
+<!-- Movies by Category -->
+<h2>Movies</h2>
+<h3>Categories</h3>
+
+<h5>Drama</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @drama.each do |movie| %>
+  <% if movie.catego == 'movies' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+<h5>Comedy</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @comedy.each do |movie| %>
+  <% if movie.catego == 'movies' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+<h5>Horror</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @horror.each do |movie| %>
+  <% if movie.catego == 'movies' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+<h5>Action</h5>
+<hr>
+<input type='button' class='btn btn-light' id='point' value='Show'>
+  <div id='Ser'>
+  <% @action.each do |movie| %>
+  <% if movie.catego == 'movies' %>
+    <div class="card-product">
+      <%= image_tag movie.photo %>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <h4><b><%= "#{movie.year}" %></b></h4>
+        <%= link_to 'Details', movie_path(movie.id), id:'det_link' %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
 </div>
+
+<script type="text/javascript">
+  // The function for hiding and showing element on our index page
+  const btns = document.querySelectorAll('#point')
+  btns.forEach((btn) => {
+    console.log(btn.value)
+    console.log(btn.nextElementSibling)
+    btn.addEventListener('click', (event) => {
+      if (btn.value === 'Hide'){
+        event.currentTarget.nextElementSibling.style.display = "none";
+        event.currentTarget.value = "Show"
+      } else {
+        event.currentTarget.nextElementSibling.style.display = "block";
+        event.currentTarget.value = "Hide"
+      }
+    })
+  })
+</script>
+
+<style>
+  h2, h3 {
+    margin-bottom:20px;
+    margin-top: 30px;
+    color:#568EA3;
+    letter-spacing: 1px;
+  }
+  input {
+    margin-bottom:25px;
+    margin-top:25px;
+  }
+  h5 {
+    color:#68C3D4;
+  }
+  h1 {
+    text-align:center;
+    margin-bottom:20px;
+    margin-top: 30px;
+    color:#826251;
+    text-shadow: 2px 2px 2px gray;
+    font-weight:bold;
+    letter-spacing: 1px;
+    font-size:50px;
+  }
+</style>

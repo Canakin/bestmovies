@@ -8,3 +8,47 @@
 @import "images";
 @import "arrow";
 
+.card-product {
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  margin:20px;
+  display:flex;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-product h4 {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+#det_link {
+  margin-top:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  background:#FFE8D1;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+#Ser {
+  display:none;
+}
