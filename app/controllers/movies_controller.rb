@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
   end
 
   def top
-    @movies = Movie.where('imdb_score > ?', 7.5).sort { |a, b| b <=> a }
+    @movies = Movie.where('imdb_score >= ?', 7.0).sort { |a, b| b <=> a }
   end
 
   def new
