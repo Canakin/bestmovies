@@ -18,7 +18,7 @@
       <h4><b>Reviewed Movies:</b></h4>
       <% @reviews.each do |review| %>
         <% if review.user %>
-          <li><%= review.movie.title %></li>
+          <li><b><%= review.movie.title %></b></li>
           <p><%= review.content %></p>
         <% end %>
       <% end %>
@@ -26,7 +26,7 @@
       <h3><strong>Posts: </strong></h3>
       <% @posts.each do |post| %>
       <% if post.user %>
-       <li><%= post.forum.title %></li>
+       <li><b><%= post.forum.title %></b></li>
        <p><%= post.content %></p>
       <% end %>
       <% end %>
@@ -39,7 +39,18 @@
     width:700px;
     margin:auto;
   }
-  h2 {
+  h2, h3, h4 {
     margin-top:20px;
+    color:#826251;
+    letter-spacing: 1px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    color:#826251;
+  }
+  p {
+    color:#568EA3;
   }
 </style>
