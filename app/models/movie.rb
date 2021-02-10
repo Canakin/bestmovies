@@ -9,7 +9,7 @@ class Movie < ApplicationRecord
   validates :genre, presence: true
   validates :summary, presence: true, length: { maximum: 1500 }
   validates :imdb_score, presence: true
-  validates :catego, presence: true, inclusion: { in: ['movie', 'TV series'] }
+  validates :catego, presence: true, inclusion: { in: ['movies', 'TV series'] }
   validates :origin, presence: true
   validates :languange, presence: true
 end

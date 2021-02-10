@@ -6,7 +6,7 @@
 }
 
 li {
-  margin-top:40px;
+  margin-top:50px;
   font-size: 20px;
   font-style:italic;
 }
@@ -18,13 +18,17 @@ h2 {
   text-shadow:2px 2px 2px gray;
 }
 
-.container {
+#top_list {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-gap: 50px;
+  grid-gap: 100px;
+  margin-top:40px;
+
 }
 
 #mov_pic {
-  width:100px;
-  height:100px;
+  width:200px;
+  height:200px;
+  margin:auto;
+  margin-bottom:40px;
 }

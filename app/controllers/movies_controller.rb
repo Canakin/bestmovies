@@ -16,7 +16,6 @@ class MoviesController < ApplicationController
 
   def top
     @movies = Movie.where('imdb_score > ?', 7.5).sort { |a, b| b <=> a }
-    @avg_rate
   end
 
   def new

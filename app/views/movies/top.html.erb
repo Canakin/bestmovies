@@ -1,11 +1,14 @@
-<div class='container'>
+<div class='container' id='top_list'>
   <div>
     <h1>Top Movies</h1>
     <hr size=10 color=#826251>
     <div>
         <ol>
-          <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie| %>
+          <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.each do |movie| %>
             <% if movie.catego == "movies"  %>
+              <% films =[] %>
+              <% films.push(movie) %>
+              <% films.each do |movie|  %>
               <li>
                 <p style='font-size:22px'><%= "#{movie.title} (#{movie.year}) "%></p>
                 <p><b>Rating:</b><%= " #{movie.imdb_score} "%></p>
@@ -14,6 +17,7 @@
               <%= image_tag movie.photo, class:'img_top', id:'mov_pic'%>
             <% end %>
           <% end  %>
+          <% end %>
         </ol>
       </div>
   </div>
@@ -23,14 +27,14 @@
     <hr size=10 color=#826251>
       <div>
         <ol>
-          <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |movie| %>
-            <% if movie.catego == "TV series"  %>
+          <% @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5).each do |film| %>
+            <% if film.catego == "TV series"  %>
               <li>
-                <p style='font-size:22px'><%= "#{movie.title} (#{movie.year}) "%></p>
-                <p><b>Rating:</b><%= " #{movie.imdb_score} "%></p>
-                <%= link_to ' 👉   ', movie_path(movie) %>
+                <p style='font-size:22px'><%= "#{film.title} (#{film.year}) "%></p>
+                <p><b>Rating:</b><%= " #{film.imdb_score} "%></p>
+                <%= link_to ' 👉   ', movie_path(film) %>
               </li>
-              <%= image_tag movie.photo, class:'img_top', id:'mov_pic'%>
+              <%= image_tag film.photo, class:'img_top', id:'mov_pic'%>
             <% end %>
           <% end  %>
         </ol>
@@ -38,5 +42,3 @@
   </div>
 </div>
 
-<!-- @movies.sort {|a,b| b.imdb_score <=> a.imdb_score}.first(5) -->
-<!-- <hr size=10 color=gray> -->

@@ -10,7 +10,21 @@
     <%= f.input :origin, label:"Movie Country" %>
     <%= f.input :languange, label:"Movie Language" %>
     <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class:'btn btn-secondary', id:'centered'%>
+    <%= f.button :submit, class:'btn btn-light', id:'centered'%>
   <% end %>
 </div>
 </div>
+
+<style>
+  label {
+    font-weight: bold;
+    color:#826251;
+    letter-spacing: 1px;
+  }
+  select {
+    margin-top:15px;
+    margin-bottom: 20px;
+  }
+</style>
+
+

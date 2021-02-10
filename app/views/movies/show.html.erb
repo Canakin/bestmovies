@@ -1,4 +1,4 @@
-<div class='container' style='margin-top: 20px;'>
+<div class='container' style='margin-top: 40px;'>
   <div class='card-product'>
   <%= image_tag @movie.photo %>
   <div class="card-product-infos">
@@ -24,8 +24,8 @@
   </div>
   </div>
 
-  <h2 style='margin-top:30px; text-shadow:1px 1px gray;'><strong>User Reviews</strong></h2>
-  <p><b>Average User Review:</b><%= " #{@avg_rate} "%></p>
+  <h2 style='margin-top:50px; text-shadow:1px 1px gray;color:#826251;'><strong>User Reviews</strong></h2>
+  <p style='color:#568EA3; font-size:18px;'><b>Average User Review:</b><%= " #{@avg_rate} "%></p>
     <% @movie.reviews.each do |review| %>
     <div class='card-product' style='height:150px; margin-top:30px;'>
     <div class="card-product-infos">
@@ -60,6 +60,6 @@
     <hr size='4' width='90%' color='gray'>
   </div>
   <div class='centered_item' style='margin-top: 30px; margin-bottom: 30px; display:flex; align-items: center; justify-content: center;'>
-    <%= link_to 'All Movies', movies_path, class:'btn-dark' %>
+    <%= link_to 'All Movies', movies_path, class:'btn-light', id:'centered' %>
   </div>
 </div>
