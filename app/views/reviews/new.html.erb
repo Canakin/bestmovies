@@ -1,5 +1,38 @@
-<%= simple_form_for [:movie_id, @review], url: movie_reviews_path(params[:movie_id]) do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating, collection: 0..10 %>
-  <%= f.button :submit, class:'btn btn-primary' %>
-<% end  %>
+<div class='container' id='container'>
+  <h1 align='center'><b>Add your valuable review <%= current_user.first_name %></b></h1>
+  <hr>
+  <%= simple_form_for [:movie_id, @review], url: movie_reviews_path(params[:movie_id]) do |f| %>
+    <%= f.input :content, label:'Review Content' %>
+    <%= f.input :rating, label:'Movie Rating',   collection: 0..10 %>
+    <%= f.button :submit, class:'btn btn-primary', id:'addReview' %>
+  <% end  %>
+</div>
+
+
+<script>
+  // The vaiables are defiend here!!
+  const header = document.querySelector('h1');
+  const button = document.getElementById('addReview');
+  const labels = document.querySelectorAll('label');
+  const container = document.getElementById('container');
+  const textarea = document.getElementById('review_content');
+  //styling...
+
+  header.style.marginBottom = "20px";
+  header.style.marginTop = "20px";
+  button.style.margin = 'auto';
+  button.style.display = 'block';
+  button.style.width = '20%';
+  container.style.marginBottom = '50px'
+  container.style.marginTop = '50px'
+  labels.forEach(x => {
+    x.style.fontWeight = 'bold';
+  });
+  labels.forEach(x => {
+    x.style.marginTop = '30px';
+  });
+  textarea.style.marginTop = '20px'
+  document.querySelector('select').style.marginTop = '20px'
+  document.querySelector('select').style.marginBottom = '20px'
+</script>
+

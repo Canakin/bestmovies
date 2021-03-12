@@ -160,23 +160,13 @@
   </div>
 
 </div>
-
-<script type="text/javascript">
-  // The function for hiding and showing element on our index page
-  const btns = document.querySelectorAll('#point')
-  btns.forEach((btn) => {
-    console.log(btn.value)
-    console.log(btn.nextElementSibling)
-    btn.addEventListener('click', (event) => {
-      if (btn.value === 'Hide'){
-        event.currentTarget.nextElementSibling.style.display = "none";
-        event.currentTarget.value = "Show"
-      } else {
-        event.currentTarget.nextElementSibling.style.display = "block";
-        event.currentTarget.value = "Hide"
-      }
-    })
-  })
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("input#point").click(function(){
+      $("input#point").next().toggle();
+    });
+  });
 </script>
 
 <style>
